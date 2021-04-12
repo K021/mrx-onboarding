@@ -20,3 +20,5 @@ RUN         mkdir -p /var/log/celery/app
 WORKDIR     /srv/app/mrxob
 EXPOSE      8000
 CMD         ["/root/.pyenv/versions/app/bin/python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+LABEL       org.opencontainers.image.source https://github.com/K021/mrx-onboarding
