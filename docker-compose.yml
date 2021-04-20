@@ -1,0 +1,9 @@
+version: '3'  # 파일 규격 버전
+
+services:  # 실행하려는 컨테이너들을 정의한다. 컨테이너 대신 서비스라는 개념을 적용한다.
+  django:
+    build:
+      context: .
+    ports:  # docker run -p 옵션 
+      - "8000:8000"
+    command: /root/.pyenv/versions/app/bin/python manage.py runserver 0:8000
