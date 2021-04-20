@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mrxob-deployment
+  labels:
+    app: mrxob
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mrxob
+  template:
+    metadata:
+      labels:
+        app: mrxob
+    spec:
+      containers:
+      - name: mrxob
+        image: ghcr.io/k021/mrxob
+        ports:
+        - containerPort: 8000
+      imagePullSecrets:
+      - name: regcred
