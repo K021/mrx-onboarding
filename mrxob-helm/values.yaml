@@ -48,7 +48,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: mrxob-helm3.192.168.64.2.sslip.io
+    - host: mrxob-helm.192.168.64.240.sslip.io
       paths:
       - path: /
         pathType: Prefix
